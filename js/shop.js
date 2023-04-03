@@ -15,6 +15,9 @@ document
   .getElementById("calculateTotal")
   .addEventListener("click", calculateTotal);
 document.getElementById("generateCart").addEventListener("click", generateCart);
+document
+  .getElementById("applyPromotionsCart")
+  .addEventListener("click", applyPromotionsCart);
 // Array with products (objects) added directly with push(). Products in this array are repeated.
 let cartList = [];
 
@@ -67,6 +70,19 @@ function generateCart() {
 // Exercise 5
 function applyPromotionsCart() {
   // Apply promotions to each item in the array "cart"
+  cart.forEach((product) => {
+    product.subtotal = Number(product.quantity * product.price);
+    product.subtotalWithDiscount = 0;
+    if (!product.offer || product.quantity < product.offer.number) {
+      product.subtotalWithDiscount = product.subtotal;
+    } else {
+      let discount = Number(product.offer.percent) / 100;
+      product.subtotalWithDiscount = Math.round(
+        product.subtotal - product.subtotal * discount
+      );
+    }
+  });
+  console.log(cart);
 }
 
 // Exercise 6
