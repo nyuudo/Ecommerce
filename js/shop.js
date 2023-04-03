@@ -14,10 +14,6 @@ document.getElementById("cleanCart").addEventListener("click", cleanCart);
 document
   .getElementById("calculateTotal")
   .addEventListener("click", calculateTotal);
-document.getElementById("generateCart").addEventListener("click", generateCart);
-document
-  .getElementById("applyPromotionsCart")
-  .addEventListener("click", applyPromotionsCart);
 
 // Array with products (objects) added directly with push(). Products in this array are repeated.
 let cartList = [];
@@ -46,6 +42,10 @@ function cleanCart() {
 // Exercise 3
 function calculateTotal() {
   // Calculate total price of the cart using the "cartList" array
+  for (let i = 0; i < cartList.length; i++) {
+    total += cartList[i].price;
+  }
+  return console.log(total);
 }
 
 // Exercise 4
