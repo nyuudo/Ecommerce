@@ -38,7 +38,10 @@ function buy(id) {
   }
 }
 // Exercise 2
-function cleanCart() {}
+function cleanCart() {
+  cartList = [];
+  console.log(cartList);
+}
 
 // Exercise 3
 function calculateTotal() {
