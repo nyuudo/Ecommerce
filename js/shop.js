@@ -14,7 +14,7 @@ document.getElementById("cleanCart").addEventListener("click", cleanCart);
 document
   .getElementById("calculateTotal")
   .addEventListener("click", calculateTotal);
-
+document.getElementById("generateCart").addEventListener("click", generateCart);
 // Array with products (objects) added directly with push(). Products in this array are repeated.
 let cartList = [];
 
@@ -52,6 +52,16 @@ function calculateTotal() {
 function generateCart() {
   // Using the "cartlist" array that contains all the items in the shopping cart,
   // generate the "cart" array that does not contain repeated items, instead each item of this array "cart" shows the quantity of product.
+  cartList.forEach((product) => {
+    let productCart = cart.find((p) => p.id === product.id);
+    if (productCart === undefined) {
+      product.quantity = 1;
+      cart.push(product);
+    } else {
+      productCart.quantity++;
+    }
+  });
+  console.log(cart);
 }
 
 // Exercise 5
