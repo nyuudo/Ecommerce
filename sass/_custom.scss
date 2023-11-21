@@ -1,0 +1,38 @@
+// google font
+@import url("https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@400;700&display=swap");
+$font-family-base: "Asap Condensed", sans-serif;
+
+// custom colors
+$primary: #487eb0;
+$secondary: #5bbb98;
+$danger: #d45400;
+$dark: #273c74;
+
+// Using mask to all icons
+.icons {
+  /* Add dimensions to span */
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  /* Add background color */
+  background-color: white;
+  /* Add mask image, use variable to reduce duplication */
+  --svg: url("../images/heart.svg");
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+.icons--cart {
+  --svg: url("../images/cart.svg");
+  background-color: #d45400;
+}
+
+.icons--cart-plus {
+  --svg: url("../images/cart-plus.svg");
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";

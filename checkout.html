@@ -9,14 +9,8 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Checkout</title>
-    <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="./css/main.css" />
 
     <!-- Bootstrap icons-->
     <link
@@ -35,7 +29,9 @@
       id="navbar-example2"
     >
       <div class="container d-flex">
-        <a class="navbar-brand" href="#!">ShopNow</a>
+        <a class="navbar-brand" href="/"
+          ><img src="./images/innovain.svg" alt="brand-logo"
+        /></a>
         <div class="d-flex flex-row order-lg-last align-items-center">
           <button
             type="button"
@@ -51,7 +47,6 @@
             class="navbar-nav me-3 me-lg-0 d-flex flex-row align-items-center"
           >
             <li class="dropdown search-dropdown nav-item py-lg-3">
-              <!-- onclick="open_modal()" -->
               <a
                 href="javascript:void(0)"
                 class="btn btn-outline-dark flex-center"
@@ -60,8 +55,8 @@
                 data-bs-target="#cartModal"
                 id="open_modal"
                 data-bs-auto-close="outside"
-              >
-                <i class="fas fa-shopping-cart me-1"></i> Cart
+                ><img src="./images/cart.svg" alt="cart" />
+                <!-- icono -->Cart
                 <span
                   class="badge bg-dark text-white ms-1 rounded-pill"
                   id="count_product"
@@ -71,53 +66,32 @@
             </li>
           </ul>
         </div>
-
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="navbar-nav me-auto mb-4 mb-lg-0 ms-lg-5">
-            <li class="nav-item">
-              <a class="nav-link" href="#grocery"
-                ><i class="fas fa-shopping-basket"></i> Grocery</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#beauty"
-                ><i class="fas fa-heart"></i> Beauty</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#clothes"
-                ><i class="fas fa-tshirt"></i> Clothes</a
-              >
-            </li>
-          </ul>
-        </div>
       </div>
     </nav>
+
     <div class="container">
       <h1 class="text-center head m-4">Checkout Page</h1>
 
       <div class="row mr-0">
         <div class="col-sm-6">
           <h3 class="my-3 bord shadow text-center">
-            <i class="fas fa-dollar-sign p-2"></i>Cash on Delivery
+            <!-- icon -->Cash on Delivery
           </h3>
         </div>
         <div class="col-sm-6">
-          <h3 class="my-3 bord shadow text-center">
-            <i class="fas fa-arrows-alt-h p-2"></i>100% Return
-          </h3>
+          <h3 class="my-3 bord shadow text-center"><!-- icon -->100% Return</h3>
         </div>
       </div>
 
       <div class="row mr-0">
         <div class="col-sm-6">
           <h3 class="my-3 bord shadow text-center">
-            <i class="far fa-thumbs-up p-2"></i>Quality Assured
+            <!-- icon -->Quality Assured
           </h3>
         </div>
         <div class="col-sm-6">
           <h3 class="my-3 bord shadow text-center">
-            <i class="fas fa-stopwatch p-2"></i>Delivery on time
+            <!-- icon -->Delivery on time
           </h3>
         </div>
       </div>
@@ -214,7 +188,7 @@
               id="validate"
               class="p-2 px-4 btn btn-primary shadow-lg"
             >
-              <i class="fas fa-cart-arrow-down p-2"></i>Save
+              <!-- icon -->Save
             </button>
           </div>
         </div>
@@ -224,9 +198,7 @@
     <!-- Footer-->
     <footer class="py-3 bg-dark">
       <div class="container">
-        <p class="m-0 text-center text-white">
-          Copyright &copy; Your Website 2022
-        </p>
+        <p class="m-0 text-center text-white">Copyright @nyuudo 2023</p>
       </div>
     </footer>
 
@@ -241,7 +213,8 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">
-              <i class="fas fa-cart-arrow-down"></i> My Cart
+              <!-- icon -->
+              My Cart
             </h5>
             <button
               type="button"
@@ -265,14 +238,7 @@
       </div>
     </div>
 
-    <!-- Bootstrap core JS-->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- Core theme JS-->
+    <!-- <script src="./bootstrap.bundle.min.js"></script> -->
     <script type="module" src="js/checkout.js"></script>
   </body>
 </html>

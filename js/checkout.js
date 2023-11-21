@@ -1,19 +1,12 @@
-// Exercise 6
-
-// Listener for validation button
-document.getElementById("validate").addEventListener("click", validate);
-
-// Export using Module
 export function validate() {
+  document.getElementById("validate").addEventListener("click", validate);
   let error = 0;
-  // Get the input fields
   const fName = document.getElementById("fName");
   const fLastN = document.getElementById("fLastN");
   const fEmail = document.getElementById("fEmail");
   const fPassword = document.getElementById("fPassword");
   const fPhone = document.getElementById("fPhone");
 
-  // Get the error elements
   const errorName = document.getElementById("errorName");
   const errorLastN = document.getElementById("errorLastN");
   const errorEmail = document.getElementById("errorEmail");
@@ -25,8 +18,7 @@ export function validate() {
   validatePhone();
   validatePassword();
   validateEmail();
-  // Validate fields entered by the user: name, phone, password, and email
-  // Validate at least 3 characters
+
   function validate3characters() {
     const userInputs = document.querySelectorAll('[id^="f"]');
     userInputs.forEach((input) => {
@@ -38,21 +30,17 @@ export function validate() {
     });
   }
 
-  // Validate only letters
   function validateNameAndLastN() {
-    if (fName.value.match(/^[A-Za-z\s]*$/)) {
-    } else {
+    if (!fName.value.match(/^[A-Za-z\s]*$/)) {
       fName.classList.add("is-invalid");
       error++;
     }
-    if (fLastN.value.match(/^[A-Za-z\s]*$/)) {
-    } else {
+    if (!fLastN.value.match(/^[A-Za-z\s]*$/)) {
       fLastN.classList.add("is-invalid");
       error++;
     }
   }
 
-  // Validate only numbers (9 digits)
   function validatePhone() {
     if (fPhone.value.match(/^\d{9}$/)) {
     } else {
@@ -61,7 +49,6 @@ export function validate() {
     }
   }
 
-  // Validate only numbers AND letters
   function validatePassword() {
     if (fPassword.value.match(/^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$/)) {
     } else {
@@ -70,7 +57,6 @@ export function validate() {
     }
   }
 
-  // Validate Email is fully compliant with the RFC-2822 spec.
   function validateEmail() {
     if (
       fEmail.value.match(
@@ -84,8 +70,8 @@ export function validate() {
   }
 
   if (error > 0) {
-    alert("Error");
+    showModal("Error");
   } else {
-    alert("OK");
+    showMessage("OK");
   }
 }
