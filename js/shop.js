@@ -1,6 +1,40 @@
 // Import Modules
 import { products } from "./products.js";
-//import { validate } from "./checkout.js";
+
+// Maping the products to render in the page
+function showProducts(products) {
+  const formatedProducts = products.map((item) => {
+    return `
+    <div class="col-md-4 px-6" id="${item.type}">
+        <div class="h-100 m-4">
+          <img
+            class="card-img-top"
+            src="./images/${item.image}"
+            alt="${item.name}"
+          />
+          <div class="card-body text-center p-4">
+              <h3 class="fw-bolder">${item.name}</h3>
+              <p class="text-primary">${item.description}</p>
+              <h3 class="fw-bolder text-dark">€ ${item.price}</h3>
+            </div>
+          <div>
+            <div class="text-center">
+              <button
+                id="product-0${item.id}"
+                type="button"
+                class="btn btn-outline-dark d-inline-flex btn-scale-hover"
+              ><span class="cart-plus"></span>
+              ADD TO CART
+              </button>
+            </div>
+          </div>
+        </div>
+    </div>
+    `;
+  });
+  document.getElementById("products").innerHTML = formatedProducts.join(" ");
+}
+showProducts(products);
 
 // Listeners to access Product Buttons in html from Module (UPDATE to strict equality)
 const productButtons = document.querySelectorAll('[id^="product-"]');
@@ -17,43 +51,47 @@ let cart = [];
 let total = 0;
 
 function calculateTotal() {
-  for (let i = 0; i < cart.length; i++) {
-    total += cart[i].subtotalWithDiscount;
-  }
-  document.querySelector("#total_price").innerHTML = total;
+  const total = cart.reduce(
+    (acc, product) => acc + parseFloat(product.subtotalWithDiscount),
+    0
+  );
+  document.querySelector("#total_price").innerHTML = total.toFixed(2);
   return console.log(total);
 }
 
 function applyPromotionsCart() {
   cart.forEach((product) => {
-    product.subtotal = Number(product.quantity * product.price);
+    product.subtotal = product.quantity * product.price;
     product.subtotalWithDiscount = 0;
+
     if (!product.offer || product.quantity < product.offer.number) {
-      product.subtotalWithDiscount = product.subtotal;
+      product.subtotalWithDiscount = product.subtotal.toFixed(2);
     } else {
-      let discount = Number(product.offer.percent) / 100;
-      product.subtotalWithDiscount = Math.round(
-        product.subtotal - product.subtotal * discount
-      );
+      let discount = product.offer.percent / 100;
+      product.subtotalWithDiscount = (
+        product.subtotal *
+        (1 - discount)
+      ).toFixed(2);
     }
   });
 }
 
 function printCart() {
   let tbody = `<tbody border="0">`;
+  let htmlString = ""; // New variable to store the entire HTML string
   cart.forEach((product) => {
-    tbody = tbody + `<tr>`;
-    tbody = tbody + `<th scope="row">${product.name}</th>`;
-    tbody = tbody + `<td>$${product.price}</td>`;
-    tbody = tbody + `<td>${product.quantity}</td>`;
-    tbody = tbody + `<td>$${product.subtotalWithDiscount}</td>`;
-    tbody += `</tr>`;
-    document.getElementById("cart_list").innerHTML = tbody;
+    htmlString += `<tr>`;
+    htmlString += `<th scope="row">${product.name}</th>`;
+    htmlString += `<td>$${product.price}</td>`;
+    htmlString += `<td>${product.quantity}</td>`;
+    htmlString += `<td>$${product.subtotalWithDiscount}</td>`;
+    htmlString += `</tr>`;
   });
+  tbody += htmlString; // Append the HTML string to tbody
+  document.getElementById("cart_list").innerHTML = tbody;
   calculateTotal();
 }
 
-// ** Nivell II **
 // Exercise 7
 function addToCart(id) {
   // Refactor previous code in order to simplify it
@@ -72,6 +110,7 @@ function addToCart(id) {
   }
   applyPromotionsCart();
   console.log(cart);
+  document.getElementById("count_product").textContent = cart.length;
 }
 
 // Updated cleanCart function on Modal
@@ -81,12 +120,8 @@ function cleanCart() {
   document.getElementById("cart_list").innerHTML = "";
   document.querySelector("#total_price").innerHTML = cart.length;
 }
-// Exercise 8
-function removeFromCart(id) {
-  // 1. Loop for to the array products to get the item to add to cart
-  // 2. Add found product to the cartList array
-  //cart = cart.filter((x) => x.id !== id);
-}
+
+function removeFromCart(id) {}
 
 function open_modal() {
   console.log("Open Modal");

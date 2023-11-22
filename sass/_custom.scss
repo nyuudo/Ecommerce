@@ -1,0 +1,77 @@
+// google font
+@import url("https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@400;700&display=swap");
+$font-family-base: "Asap Condensed", sans-serif;
+
+// custom colors
+$primary: #487eb0;
+$secondary: #e2a705;
+$danger: #d45400;
+$dark: #273c74;
+$ontime-svg: url("../images/ontime.svg");
+$quality-svg: url("../images/quality.svg");
+$refunds-svg: url("../images/refunds.svg");
+$support-svg: url("../images/support.svg");
+$cart-svg: url("../images/cart.svg");
+$cart-plus-svg: url("../images/cart-plus.svg");
+
+@mixin checkout-icons {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin-right: 0.5rem;
+  background-color: white;
+}
+.ontime {
+  @include checkout-icons;
+  mask-image: $ontime-svg;
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+}
+.quality {
+  @include checkout-icons;
+  mask-image: $quality-svg;
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+}
+
+.refunds {
+  @include checkout-icons;
+  mask-image: $refunds-svg;
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+}
+
+.support {
+  @include checkout-icons;
+  mask-image: $support-svg;
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+}
+
+@mixin button-icons {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 0.25rem;
+  background-color: $primary;
+}
+
+.cart {
+  @include button-icons;
+  mask-image: $cart-svg;
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+}
+
+.cart-plus {
+  @include button-icons;
+  mask-image: $cart-plus-svg;
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+}
+
+.btn-scale-hover:hover {
+  transform: scale(0.98);
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";

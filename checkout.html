@@ -9,23 +9,8 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Checkout</title>
-    <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-
-    <!-- Bootstrap icons-->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <!-- Core theme CSS (includes Bootstrap)-->
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
 
   <body>
@@ -35,94 +20,72 @@
       id="navbar-example2"
     >
       <div class="container d-flex">
-        <a class="navbar-brand" href="#!">ShopNow</a>
+        <a class="navbar-brand" href="/"
+          ><img src="./images/innovain.svg" alt="brand-logo"
+        /></a>
         <div class="d-flex flex-row order-lg-last align-items-center">
-          <button
-            type="button"
-            class="navbar-toggler order-last collapsed"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbar"
-            aria-expanded="false"
-            aria-controls="navbar"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
           <ul
             class="navbar-nav me-3 me-lg-0 d-flex flex-row align-items-center"
           >
             <li class="dropdown search-dropdown nav-item py-lg-3">
-              <!-- onclick="open_modal()" -->
               <a
                 href="javascript:void(0)"
-                class="btn btn-outline-dark flex-center"
+                class="btn btn-outline-dark d-flex align-items-center btn-scale-hover"
                 type="button"
                 data-bs-toggle="modal"
                 data-bs-target="#cartModal"
                 id="open_modal"
                 data-bs-auto-close="outside"
-              >
-                <i class="fas fa-shopping-cart me-1"></i> Cart
-                <span
-                  class="badge bg-dark text-white ms-1 rounded-pill"
-                  id="count_product"
+                ><span class="cart"></span>
+                Cart
+                <span class="badge bg-dark ms-2 rounded-pill" id="count_product"
                   >0</span
                 >
               </a>
             </li>
           </ul>
         </div>
-
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="navbar-nav me-auto mb-4 mb-lg-0 ms-lg-5">
-            <li class="nav-item">
-              <a class="nav-link" href="#grocery"
-                ><i class="fas fa-shopping-basket"></i> Grocery</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#beauty"
-                ><i class="fas fa-heart"></i> Beauty</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#clothes"
-                ><i class="fas fa-tshirt"></i> Clothes</a
-              >
-            </li>
-          </ul>
-        </div>
       </div>
     </nav>
-    <div class="container">
-      <h1 class="text-center head m-4">Checkout Page</h1>
 
-      <div class="row mr-0">
+    <div class="container">
+      <h1 class="text-center text-dark head m-4">Checkout Page</h1>
+
+      <div class="row">
         <div class="col-sm-6">
-          <h3 class="my-3 bord shadow text-center">
-            <i class="fas fa-dollar-sign p-2"></i>Cash on Delivery
+          <h3
+            class="my-2 py-2 shadow text-center text-white text-bg-dark rounded-1 d-flex justify-content-center"
+          >
+            <span class="support"></span>Continous Support
           </h3>
         </div>
         <div class="col-sm-6">
-          <h3 class="my-3 bord shadow text-center">
-            <i class="fas fa-arrows-alt-h p-2"></i>100% Return
+          <h3
+            class="my-2 py-2 shadow text-center text-white text-bg-dark rounded-1 d-flex justify-content-center"
+          >
+            <span class="refunds"></span>100% Refunds
           </h3>
         </div>
       </div>
 
       <div class="row mr-0">
         <div class="col-sm-6">
-          <h3 class="my-3 bord shadow text-center">
-            <i class="far fa-thumbs-up p-2"></i>Quality Assured
+          <h3
+            class="my-2 py-2 shadow text-center text-white text-bg-dark rounded-1 d-flex justify-content-center"
+          >
+            <span class="quality"></span>Quality Assured
           </h3>
         </div>
         <div class="col-sm-6">
-          <h3 class="my-3 bord shadow text-center">
-            <i class="fas fa-stopwatch p-2"></i>Delivery on time
+          <h3
+            class="my-2 py-2 shadow text-center text-white text-bg-dark rounded-1 d-flex justify-content-center"
+          >
+            <span class="ontime"></span>Delivery on Time
           </h3>
         </div>
       </div>
       <form class="form">
-        <div class="row bord p-5 shadow m-5">
+        <div class="row p-1 p-md-5 shadow mx-1 my-4 m-md-5">
           <div class="col-sm-6">
             <div class="mt-3">
               <label for="fName" class="form-label">First Name:</label>
@@ -130,7 +93,8 @@
                 id="fName"
                 class="form-control ml-3"
                 type="text"
-                placeholder="First Name"
+                placeholder="John"
+                required
               />
               <div id="errorName" class="invalid-feedback">
                 This field is required and must have, at least, 3 characters
@@ -142,12 +106,12 @@
                 id="fEmail"
                 class="form-control ml-3"
                 type="email"
-                placeholder="Email"
-                minlength="3"
+                placeholder="valid@email.com"
+                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                required
               />
               <div id="errorEmail" class="invalid-feedback">
-                This field is required and must contain an '@' and have, at
-                least, 3 characters
+                This field is required and must contain a valid email address
               </div>
             </div>
             <div class="mt-3">
@@ -156,8 +120,9 @@
                 id="fAddress"
                 class="form-control"
                 type="text"
-                placeholder="Address"
+                placeholder="Street, Number, Floor"
                 minlength="3"
+                required
               />
               <div id="errorAddress" class="invalid-feedback">
                 This field is required and must have, at least, 3 characters
@@ -171,8 +136,9 @@
                 id="fLastN"
                 class="form-control"
                 type="text"
-                placeholder="Last Name"
+                placeholder="Doe"
                 minlength="3"
+                required
               />
               <div id="errorLastN" class="invalid-feedback">
                 This field is required and must have, at least, 3 characters
@@ -187,7 +153,8 @@
                 type="password"
                 minlength="4"
                 maxlength="8"
-                placeholder="Password"
+                placeholder="******"
+                required
               />
               <div id="errorPassword" class="invalid-feedback">
                 Enter a correct password
@@ -198,8 +165,8 @@
               <input
                 id="fPhone"
                 class="form-control"
-                type="number"
-                placeholder="Phone No."
+                type="tel"
+                placeholder="+34 000000000"
                 maxlength="9"
               />
               <div id="errorPhone" class="invalid-feedback">
@@ -212,9 +179,9 @@
             <button
               type="submit"
               id="validate"
-              class="p-2 px-4 btn btn-primary shadow-lg"
+              class="p-2 px-4 mb-3 btn btn-secondary btn-scale-hover"
             >
-              <i class="fas fa-cart-arrow-down p-2"></i>Save
+              <!-- icon -->Save
             </button>
           </div>
         </div>
@@ -224,9 +191,7 @@
     <!-- Footer-->
     <footer class="py-3 bg-dark">
       <div class="container">
-        <p class="m-0 text-center text-white">
-          Copyright &copy; Your Website 2022
-        </p>
+        <p class="m-0 text-center text-white">Copyright @nyuudo 2023</p>
       </div>
     </footer>
 
@@ -241,7 +206,8 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">
-              <i class="fas fa-cart-arrow-down"></i> My Cart
+              <!-- icon -->
+              My Cart
             </h5>
             <button
               type="button"
@@ -265,14 +231,7 @@
       </div>
     </div>
 
-    <!-- Bootstrap core JS-->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- Core theme JS-->
+    <!-- <script src="./bootstrap.bundle.min.js"></script> -->
     <script type="module" src="js/checkout.js"></script>
   </body>
 </html>
