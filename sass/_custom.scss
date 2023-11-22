@@ -23,28 +23,40 @@ $cart-plus-svg: url("../images/cart-plus.svg");
 }
 .ontime {
   @include checkout-icons;
+  -webkit-mask-image: $ontime-svg;
   mask-image: $ontime-svg;
+  -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
   mask-size: 100% 100%;
 }
 .quality {
   @include checkout-icons;
+  -webkit-mask-image: $quality-svg;
   mask-image: $quality-svg;
+  -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
   mask-size: 100% 100%;
 }
 
 .refunds {
   @include checkout-icons;
+  -webkit-mask-image: $refunds-svg;
   mask-image: $refunds-svg;
+  -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
   mask-size: 100% 100%;
 }
 
 .support {
   @include checkout-icons;
+  -webkit-mask-image: $support-svg;
   mask-image: $support-svg;
+  -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
   mask-size: 100% 100%;
 }
 
@@ -58,15 +70,22 @@ $cart-plus-svg: url("../images/cart-plus.svg");
 
 .cart {
   @include button-icons;
+  -webkit-mask-image: $cart-svg;
   mask-image: $cart-svg;
+  -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
   mask-size: 100% 100%;
 }
 
 .cart-plus {
   @include button-icons;
-  mask-image: $cart-plus-svg;
+  --svg: url("../images/cart-plus.svg");
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
   mask-size: 100% 100%;
 }
 

@@ -6,8 +6,11 @@
   height: 32px;
   margin-right: 0.5rem;
   background-color: white;
+  -webkit-mask-image: url("../images/ontime.svg");
   mask-image: url("../images/ontime.svg");
+  -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
   mask-size: 100% 100%;
 }
 
@@ -17,8 +20,11 @@
   height: 32px;
   margin-right: 0.5rem;
   background-color: white;
+  -webkit-mask-image: url("../images/quality.svg");
   mask-image: url("../images/quality.svg");
+  -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
   mask-size: 100% 100%;
 }
 
@@ -28,8 +34,11 @@
   height: 32px;
   margin-right: 0.5rem;
   background-color: white;
+  -webkit-mask-image: url("../images/refunds.svg");
   mask-image: url("../images/refunds.svg");
+  -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
   mask-size: 100% 100%;
 }
 
@@ -39,8 +48,11 @@
   height: 32px;
   margin-right: 0.5rem;
   background-color: white;
+  -webkit-mask-image: url("../images/support.svg");
   mask-image: url("../images/support.svg");
+  -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
   mask-size: 100% 100%;
 }
 
@@ -50,8 +62,11 @@
   height: 24px;
   margin-right: 0.25rem;
   background-color: #487eb0;
+  -webkit-mask-image: url("../images/cart.svg");
   mask-image: url("../images/cart.svg");
+  -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
   mask-size: 100% 100%;
 }
 
@@ -61,8 +76,12 @@
   height: 24px;
   margin-right: 0.25rem;
   background-color: #487eb0;
-  mask-image: url("../images/cart-plus.svg");
+  --svg: url("../images/cart-plus.svg");
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
   mask-size: 100% 100%;
 }
 
