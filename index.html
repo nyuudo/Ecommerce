@@ -8,7 +8,7 @@
     />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>innovain</title>
+    <title>Innovain: the marketplace for tech hype</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="./css/main.css" />
   </head>
@@ -23,7 +23,7 @@
       id="navbar-example2"
     >
       <div class="container d-flex">
-        <a class="navbar-brand" href="/"
+        <a class="navbar-brand mb-3" href="/"
           ><img src="./images/innovain.svg" alt="brand-logo"
         /></a>
         <div class="d-flex flex-row order-lg-last align-items-center">
@@ -43,17 +43,15 @@
             <li class="dropdown search-dropdown nav-item py-lg-3">
               <a
                 href="javascript:void(0)"
-                class="btn btn-outline-dark flex-center"
+                class="btn btn-outline-dark d-flex align-items-center btn-scale-hover"
                 type="button"
                 data-bs-toggle="modal"
                 data-bs-target="#cartModal"
                 id="open_modal"
                 data-bs-auto-close="outside"
-                ><img src="./images/cart.svg" alt="cart" />
-                <!-- icono -->Cart
-                <span
-                  class="badge bg-dark text-white ms-1 rounded-pill"
-                  id="count_product"
+                ><span class="cart"></span>
+                Cart
+                <span class="badge bg-dark ms-2 rounded-pill" id="count_product"
                   >0</span
                 >
               </a>
@@ -62,24 +60,17 @@
         </div>
 
         <div id="navbar" class="navbar-collapse collapse">
-          <ul class="navbar-nav me-auto mb-4 mb-lg-0 ms-lg-5">
+          <ul class="navbar-nav ms-lg-5 d-flex align-items-center">
             <li class="nav-item">
-              <a class="nav-link" href="#pointless"
-                ><!-- icono -->
-                POINTLESS</a
+              <a class="nav-link align-self-baseline" href="#pointless">
+                🗑 POINTLESS</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#delusional"
-                ><!-- icono -->
-                DELUSIONAL</a
-              >
+              <a class="nav-link" href="#delusional">✨ DELUSIONAL</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#speculative"
-                ><!-- icono -->
-                SPECULATIVE</a
-              >
+              <a class="nav-link" href="#speculative">📉 SPECULATIVE</a>
             </li>
           </ul>
         </div>
@@ -90,16 +81,17 @@
     <header class="bg-dark py-5">
       <div class="container px-4 px-lg-5 my-5">
         <div class="text-center text-white">
-          <h2 class="display-4 fw-bolder">"Game-Changing" Outlet</h2>
-          <p class="lead fw-normal text-white-50 mb-0">
+          <h2 class="display-4 fw-bolder text-secondary">
+            "Game-Changing" Outlet
+          </h2>
+          <p class="lead fw-normal text-white mb-0">
             Get up to 50% off in the no longer disruptive tech!
           </p>
-          <span class="icons"></span>
         </div>
       </div>
     </header>
     <!-- Products-->
-    <div class="container">
+    <div class="container py-5">
       <div class="row" id="products"></div>
     </div>
 
@@ -131,7 +123,7 @@
             ></button>
           </div>
           <div class="modal-body">
-            <h3 class="text-center bill px-5">Shopping Cart</h3>
+            <h3 class="text-center text-dark bill px-5">Shopping Cart</h3>
             <table class="table">
               <thead>
                 <tr>
@@ -147,12 +139,16 @@
               Total: €<span id="total_price">0</span>
             </div>
             <div class="text-center">
-              <a href="checkout.html" class="btn btn-primary m-3">Checkout</a>
+              <a
+                href="checkout.html"
+                class="btn btn-secondary m-3 btn-scale-hover"
+                >Checkout</a
+              >
 
               <a
                 href="javascript:void(0)"
                 id="cleanCart"
-                class="btn btn-primary m-3"
+                class="btn btn-secondary m-3 btn-scale-hover"
                 >Clean Cart</a
               >
             </div>

@@ -14,16 +14,16 @@ function showProducts(products) {
           />
           <div class="card-body text-center p-4">
               <h3 class="fw-bolder">${item.name}</h3>
-              <p>${item.description}</p>
-              <h3 class="fw-bolder">€ ${item.price}</h3>
+              <p class="text-primary">${item.description}</p>
+              <h3 class="fw-bolder text-dark">€ ${item.price}</h3>
             </div>
           <div>
             <div class="text-center">
               <button
                 id="product-0${item.id}"
                 type="button"
-                class="btn btn-outline-dark"
-              >
+                class="btn btn-outline-dark d-inline-flex btn-scale-hover"
+              ><span class="cart-plus"></span>
               ADD TO CART
               </button>
             </div>

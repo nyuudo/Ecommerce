@@ -1,17 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 23.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:url(#SVGID_1_);}
-</style>
-<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="12.9405" y1="287.8738" x2="465.7405" y2="-164.9261" gradientTransform="matrix(1 0 0 1 0 140)">
-	<stop  offset="0.5" style="stop-color:#273C74"/>
-	<stop  offset="1" style="stop-color:#487EB0"/>
-</linearGradient>
-<path class="st0" d="M85.3,490.7c0,12.8,8.5,21.3,21.3,21.3H192c12.8,0,21.3-8.5,21.3-21.3v-21.3L85.3,490.7z M213.3,456.5
-	l-128,21.3v-21.3l128-21.3V456.5z M320,192h-64v-64h64V192z M234.7,106.7h-64v-64h64V106.7z M320,106.7h-42.7V64H320V106.7z
-	 M405.3,128h-42.7V85.3h42.7V128z M384,64h-42.7V21.3H384V64z M490.7,21.3h-21.3V0h21.3V21.3z M448,64h-21.3V42.7H448V64z
-	 M279.3,219.6v85.3c-10.8,19.3-25.6,36.4-44.9,46.9v49.2c0,12.8-8.5,21.3-21.3,21.3h-8.5l-128,19.1v-21.3
-	c-6.3-4.3-12.8-10.8-12.8-19.1v-48.9C25.6,324.3,0,279.3,0,230.4c0-68.3,44.9-125.7,106.7-142.8v46.9H192v85.3h87.3V219.6z"/>
+<svg enable-background="new 0 0 512 512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <linearGradient id="a" gradientUnits="userSpaceOnUse" x1="12.9405" x2="465.7405" y1="427.8738"
+        y2="-24.9261">
+        <stop offset=".5" stop-color="#273c74" />
+        <stop offset="1" stop-color="#487eb0" />
+    </linearGradient>
+    <path
+        d="m85.3 490.7c0 12.8 8.5 21.3 21.3 21.3h85.4c12.8 0 21.3-8.5 21.3-21.3v-21.3zm128-34.2-128 21.3v-21.3l128-21.3zm106.7-264.5h-64v-64h64zm-85.3-85.3h-64v-64h64zm85.3 0h-42.7v-42.7h42.7zm85.3 21.3h-42.7v-42.7h42.7zm-21.3-64h-42.7v-42.7h42.7zm106.7-42.7h-21.3v-21.3h21.3zm-42.7 42.7h-21.3v-21.3h21.3zm-168.7 155.6v85.3c-10.8 19.3-25.6 36.4-44.9 46.9v49.2c0 12.8-8.5 21.3-21.3 21.3h-8.5l-128 19.1v-21.3c-6.3-4.3-12.8-10.8-12.8-19.1v-48.9c-38.2-27.8-63.8-72.8-63.8-121.7 0-68.3 44.9-125.7 106.7-142.8v46.9h85.3v85.3h87.3z"
+        fill="url(#a)" />
 </svg>

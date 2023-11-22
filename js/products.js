@@ -18,7 +18,7 @@ export const products = [
     price: 545.12,
     type: "pointless",
     description:
-      "The 4th Industrial revolution never arrived but at least You can print some garbage",
+      "The 4th Industrial revolution never arrived but at least You can print some waste",
     image: "innovain-product-02.webp",
     offer: {
       number: 0,
@@ -109,7 +109,7 @@ export const products = [
     price: 19.99,
     type: "speculative",
     description:
-      "Buy a custom domain for the new stage of internet that probably will never came",
+      "Buy a custom domain for the new stage of internet that probably will never come",
     image: "innovain-product-09.webp",
     offer: {
       number: 0,

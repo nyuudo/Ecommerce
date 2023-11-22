@@ -11,15 +11,6 @@
     <title>Checkout</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="./css/main.css" />
-
-    <!-- Bootstrap icons-->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <!-- Core theme CSS (includes Bootstrap)-->
   </head>
 
   <body>
@@ -33,33 +24,21 @@
           ><img src="./images/innovain.svg" alt="brand-logo"
         /></a>
         <div class="d-flex flex-row order-lg-last align-items-center">
-          <button
-            type="button"
-            class="navbar-toggler order-last collapsed"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbar"
-            aria-expanded="false"
-            aria-controls="navbar"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
           <ul
             class="navbar-nav me-3 me-lg-0 d-flex flex-row align-items-center"
           >
             <li class="dropdown search-dropdown nav-item py-lg-3">
               <a
                 href="javascript:void(0)"
-                class="btn btn-outline-dark flex-center"
+                class="btn btn-outline-dark d-flex align-items-center btn-scale-hover"
                 type="button"
                 data-bs-toggle="modal"
                 data-bs-target="#cartModal"
                 id="open_modal"
                 data-bs-auto-close="outside"
-                ><img src="./images/cart.svg" alt="cart" />
-                <!-- icono -->Cart
-                <span
-                  class="badge bg-dark text-white ms-1 rounded-pill"
-                  id="count_product"
+                ><span class="cart"></span>
+                Cart
+                <span class="badge bg-dark ms-2 rounded-pill" id="count_product"
                   >0</span
                 >
               </a>
@@ -70,33 +49,43 @@
     </nav>
 
     <div class="container">
-      <h1 class="text-center head m-4">Checkout Page</h1>
+      <h1 class="text-center text-dark head m-4">Checkout Page</h1>
 
-      <div class="row mr-0">
+      <div class="row">
         <div class="col-sm-6">
-          <h3 class="my-3 bord shadow text-center">
-            <!-- icon -->Cash on Delivery
+          <h3
+            class="my-2 py-2 shadow text-center text-white text-bg-dark rounded-1 d-flex justify-content-center"
+          >
+            <span class="support"></span>Continous Support
           </h3>
         </div>
         <div class="col-sm-6">
-          <h3 class="my-3 bord shadow text-center"><!-- icon -->100% Return</h3>
+          <h3
+            class="my-2 py-2 shadow text-center text-white text-bg-dark rounded-1 d-flex justify-content-center"
+          >
+            <span class="refunds"></span>100% Refunds
+          </h3>
         </div>
       </div>
 
       <div class="row mr-0">
         <div class="col-sm-6">
-          <h3 class="my-3 bord shadow text-center">
-            <!-- icon -->Quality Assured
+          <h3
+            class="my-2 py-2 shadow text-center text-white text-bg-dark rounded-1 d-flex justify-content-center"
+          >
+            <span class="quality"></span>Quality Assured
           </h3>
         </div>
         <div class="col-sm-6">
-          <h3 class="my-3 bord shadow text-center">
-            <!-- icon -->Delivery on time
+          <h3
+            class="my-2 py-2 shadow text-center text-white text-bg-dark rounded-1 d-flex justify-content-center"
+          >
+            <span class="ontime"></span>Delivery on Time
           </h3>
         </div>
       </div>
       <form class="form">
-        <div class="row bord p-5 shadow m-5">
+        <div class="row p-1 p-md-5 shadow mx-1 my-4 m-md-5">
           <div class="col-sm-6">
             <div class="mt-3">
               <label for="fName" class="form-label">First Name:</label>
@@ -104,7 +93,8 @@
                 id="fName"
                 class="form-control ml-3"
                 type="text"
-                placeholder="First Name"
+                placeholder="John"
+                required
               />
               <div id="errorName" class="invalid-feedback">
                 This field is required and must have, at least, 3 characters
@@ -116,12 +106,12 @@
                 id="fEmail"
                 class="form-control ml-3"
                 type="email"
-                placeholder="Email"
-                minlength="3"
+                placeholder="valid@email.com"
+                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                required
               />
               <div id="errorEmail" class="invalid-feedback">
-                This field is required and must contain an '@' and have, at
-                least, 3 characters
+                This field is required and must contain a valid email address
               </div>
             </div>
             <div class="mt-3">
@@ -130,8 +120,9 @@
                 id="fAddress"
                 class="form-control"
                 type="text"
-                placeholder="Address"
+                placeholder="Street, Number, Floor"
                 minlength="3"
+                required
               />
               <div id="errorAddress" class="invalid-feedback">
                 This field is required and must have, at least, 3 characters
@@ -145,8 +136,9 @@
                 id="fLastN"
                 class="form-control"
                 type="text"
-                placeholder="Last Name"
+                placeholder="Doe"
                 minlength="3"
+                required
               />
               <div id="errorLastN" class="invalid-feedback">
                 This field is required and must have, at least, 3 characters
@@ -161,7 +153,8 @@
                 type="password"
                 minlength="4"
                 maxlength="8"
-                placeholder="Password"
+                placeholder="******"
+                required
               />
               <div id="errorPassword" class="invalid-feedback">
                 Enter a correct password
@@ -172,8 +165,8 @@
               <input
                 id="fPhone"
                 class="form-control"
-                type="number"
-                placeholder="Phone No."
+                type="tel"
+                placeholder="+34 000000000"
                 maxlength="9"
               />
               <div id="errorPhone" class="invalid-feedback">
@@ -186,7 +179,7 @@
             <button
               type="submit"
               id="validate"
-              class="p-2 px-4 btn btn-primary shadow-lg"
+              class="p-2 px-4 mb-3 btn btn-secondary btn-scale-hover"
             >
               <!-- icon -->Save
             </button>
